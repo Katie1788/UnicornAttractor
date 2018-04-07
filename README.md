@@ -6,3 +6,5 @@ I used existing files which had been created by following the insructions on cod
 an accounts app, profile, register and login page, along with a products page and cart. I then created a new repository in github and added 
 the project to it. 
 There were some errors in the files at this stage, causing the display to be off when I viewed the app in my browser
+
+I was also unable to open the admin panel, which was the result f having the following line of code in my 'settings' file 'accounts.backends.CaseInsensitiveAuth'. I removed this file which resolved the issue
