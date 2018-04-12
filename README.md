@@ -10,5 +10,5 @@ There were some errors in the files at this stage, causing the display to be off
 I was also unable to open the admin panel, which was the result f having the following line of code in my 'settings' file 'accounts.backends.CaseInsensitiveAuth'. I removed this file which resolved the issue
 
 Next I created a home page. I had already created an app called 'home' by following the code institute tutorial, and created a 'templates' folder into which I had created an 'index.html' file. I had also created a 'views.py' file.
-Next, I added a 'urls.py' file to the app, and created a url for 'home'. I also added this to my list of urls under my 'ecommerce/urls.py' file. I then added a 'home' link to my list of links in my 'base.html' file, and lastly I added 'home' to my installed apps in 'settings.py'. 
+Next, I added a 'urls.py' file to the app, and created a url for 'home'. I also added this to my list of urls under my 'ecommerce/urls.py' file. I then added a 'home' link to my list of links in my 'base.html' file, and lastly I added 'home' to my installed apps in 'settings.py'.   
 
