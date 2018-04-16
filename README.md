@@ -12,3 +12,6 @@ I was also unable to open the admin panel, which was the result f having the fol
 Next I created a home page. I had already created an app called 'home' by following the code institute tutorial, and created a 'templates' folder into which I had created an 'index.html' file. I had also created a 'views.py' file.
 Next, I added a 'urls.py' file to the app, and created a url for 'home'. I also added this to my list of urls under my 'ecommerce/urls.py' file. I then added a 'home' link to my list of links in my 'base.html' file, and lastly I added 'home' to my installed apps in 'settings.py'.   
 
+I created a tracker app to add bugs and a features app to add features, added code to admin.py, models.py and forms.py and then migrated changes using the command line. Users need to be logged in to add features and are redirected back to login page if they are not logged in
+
+    
