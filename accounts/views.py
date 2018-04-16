@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
-from django.shortcuts import render, redirect, reverse
-from django.contrib import auth, messages
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
-from accounts.forms import UserLoginForm, UserRegistrationForm
 from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
@@ -16,11 +10,14 @@ from accounts.forms import UserLoginForm, UserRegistrationForm
 def index(request):
     return render(request, 'index.html')
 
+def logout(request):
+    return render(request, 'logout.html')
+
 @login_required
 def logout(request):
     auth.logout(request)
     messages.success(request, "You have logged out")
-    return redirect(reverse('index'))
+    return redirect(reverse('logout'))
 
 def login(request):
     if request.user.is_authenticated:
@@ -32,12 +29,11 @@ def login(request):
             user = auth.authenticate(username=request.POST['username'],
                                      password=request.POST['password'])
             messages.success(request, "You have successfully logged in!")
-
-
-            if user:
+        if user:
                 auth.login(user=user, request=request)
                 return redirect(reverse('index'))
-            else:
+
+        else:
                 login_form.add_error(None, "Your username or password is incorrect")
     else:
         login_form = UserLoginForm()
