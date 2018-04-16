@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'checkout',
+    'home',
+    'tracker',
+    'tracker_feature',
 ]
 
 MIDDLEWARE = [
@@ -108,8 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'accounts.backends.CaseInsensitiveAuth']
+    'django.contrib.auth.backends.ModelBackend']
 
 
 # Internationalization
@@ -141,3 +143,5 @@ STRIPE_PUBLISHABLE = os.getenv("STRIPE_PUBLISHABLE")
 STRIPE_SECRET = os.getenv("STRIPE_SECRET")
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
+
+MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
