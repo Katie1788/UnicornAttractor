@@ -20,14 +20,13 @@
 <body>
 <nav class="navbar navbar-default">
         <ul class="nav navbar-nav">
-
-               {% if user.is_athenticated %}
-                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'tracker' %}">Bugs</a></li>
+                <li><a href="{% url 'features' %}">Features</a></li>
                 <li><a href="{% url 'logout' %}">Log Out</a></li>
-            {% else %}
                 <li><a href="{% url 'login' %}">Log In</a></li>
                 <li><a href="{% url 'registration' %}">Register</a></li>
-            {% endif %}
+
             <li>
                 <a href="{% url 'view_cart' %}">
                     <i class="fa fa-shipping-cart"></i>Cart
@@ -48,14 +47,6 @@
         {%  endfor %}
     </div>
 {% endif %}
-<div class="container">
-    <div class="display">
-        <form action="{% url 'search' %}" method="get">
-            <input type="text" name="q">
-            <button type="submit">Search</button>
-        </form>
-    </div>
-</div>
 {% block content %}{% endblock %}
 </body>
 </html>
