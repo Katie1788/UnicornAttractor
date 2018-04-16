@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Bugs</h1>
+
+<table>
+    {% for item in items %}
+    <tr>
+    {% if item.done %}
+        <td><strike>{{ item.name }}</strike></td>
+        {% else %}
+        <td>{{ item.name }}</td>
+        {% endif %}
+
+    <td>
+        <form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"></form>
+    </td>
+    </tr>
+        {% empty %}
+        <p>You have nothing to show</p>
+        {% endfor %}
+
+</table>
+<a href="{% url 'add' %}">Add a Bug</a>
+{% endblock %}
