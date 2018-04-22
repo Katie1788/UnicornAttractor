@@ -5,10 +5,11 @@
 
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/homestyles.css' %}">
+
     <h1 align="center">Welcome to the Unicorn Attractor application</h1></br>
         <p align="center">This application uses an Issue Tracker that allows users to create a ticket describing any
             issue related to using the Unicorn Attractor. The tickets come in two varieties;</br>
         <p align="center"><a href="{% url 'tracker' %}">bugs</a> and <a href="{% url 'features' %}">features</a></p></br>
-        <p align="center">Users can create bugs for free, but need to log in to create features.</p>
+        <p align="center">Bugs can be created for free, and I will work on these as time allows. There is a one-off
+        charge associated with creating a feature, and these will be prioritised and fixed above bugs.</p>
 {% endblock %}
