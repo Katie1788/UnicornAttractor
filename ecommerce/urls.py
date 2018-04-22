@@ -17,7 +17,6 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from accounts import urls as urls_accounts
 from home import urls as urls_home
-from graphs import urls as urls_graphs
 from products import urls as urls_products
 from cart import urls as urls_cart
 from tracker.views import tracker, Item, create_a_bug
@@ -38,7 +37,6 @@ urlpatterns = [
     url(r'^$', Item),
     url(r'^features/', features, name='features'),
     url(r'^home/', include(urls_home)),
-    url(r'^graphs/', include(urls_graphs)),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
