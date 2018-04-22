@@ -9,7 +9,7 @@ $(function(){
         };
 
         Stripe.createToken(card, function(status, response) {
-            if status === 200) {
+            if (status === 200) {
             $("#credit-card-errors").hide();
             $("#id_stripe_id").val(response.id);
             $("#id_credit_card_number").removeAttr('name');
@@ -22,7 +22,7 @@ $(function(){
         } else {
             $("#stripe-error-message").text(response.error.message);
             $("#credit-card-errors").show();
-            $("#validate-card-btn").attr("disabled", false);
+            $("#validate_card_btn").attr("disabled", false);
         }
         });
     return false;
