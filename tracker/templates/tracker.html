@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Bugs</h1>
+<h1 align="center">Bugs</h1></br>
 
-<table>
+<table align="center">
     {% for item in items %}
     <tr>
     {% if item.done %}
@@ -20,6 +20,6 @@
         <p>You have nothing to show</p>
         {% endfor %}
 
-</table>
-<a href="{% url 'add' %}">Add a Bug</a>
+</table></br>
+    <p align="center"><a href="{% url 'add' %}">Add a Bug</a></p>
 {% endblock %}
