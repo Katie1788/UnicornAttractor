@@ -12,4 +12,6 @@ cart
 checkout
 
 Next I created a home app to create the home page with links to 'bugs' and 'features', which I also created. Note that users need to login or register in order to create features. 
+
+Finally, I deployed the project to python anywhere.
     
